@@ -5,9 +5,15 @@ import { UtilsService } from './utils.service';
 
 describe('UserService', () => {
   let userService: UserService;
+  const utilsServiceMock = {
+    pluck: jest.fn(),
+  };
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [UserService, UtilsService],
+      providers: [
+        UserService,
+        { provide: UtilsService, useValue: utilsServiceMock },
+      ],
     });
     userService = TestBed.inject(UserService);
   });
