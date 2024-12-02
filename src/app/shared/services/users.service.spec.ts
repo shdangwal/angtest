@@ -40,4 +40,10 @@ describe('UserService', () => {
       expect(userService.users).toEqual([]);
     });
   });
+  describe('getUsernames', () => {
+    it('should get usernames', () => {
+      utilsServiceMock.pluck.mockReturnValue(['foo']);
+      expect(userService.getUsernames()).toEqual(['foo']);
+    });
+  });
 });
