@@ -1,5 +1,7 @@
 # Angtest
 
+This is used as a guide on how to test angular application using jest.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
 ## Development server
